@@ -1,0 +1,103 @@
+<!--<html>
+<head>
+<style>
+.table {
+  border: 1px solid #E0E0E0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 50%;
+  margin-top: 50px;;
+  
+}
+
+th {
+  height: 50px;
+}
+</style>
+</head>
+<body>
+
+<table class= 'table' align="center">
+  
+  <tr *ngFor="let data of disp">
+    <td>{{data.city}}</td>
+    <td></td>
+   
+  </tr>
+</body>
+</html>
+-->
+<html>
+  <head>
+    <style>
+      
+      .time{
+    color: #000;
+    opacity: .5;
+      }
+
+      .button {
+  background-color: white; /* Green */
+  border: 1px solid #ff4da6 ;
+ 
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+ height: 40px;
+ width:100px ;
+  
+}
+.button1:hover {
+  background-color:#ff4da6 ;
+  color: white;
+
+      
+}  
+      
+      </style>
+  </head>
+
+  <body>
+<div *ngFor= 'let display of disp' style="width: 50%;border:1px solid #d3d3d3;height:130px;margin: 0 auto;padding: 20px;">
+  
+  
+  <div  style="    color:#2d6cd4;float:left;width:40%;height:20px;">WORKEX FULFILLED JOBS</div>
+  <div class="time"  style="float:right;height:20px;margin-left: 20px;">{{display.time}}</div>
+   
+  <br><br>
+    
+    <div  style="width:50%;height:20px;">{{display.title}}</div>
+    <br>
+    
+    <div > 
+
+
+          <div  style="float:left;width:30%;height:20px;">{{display.category[0].key}}</div>
+          <div  style="margin-left:20px;float:left;width:30%;height:20px;">{{display.compensation}}</div>
+
+    </div>
+<br>
+<br>
+    <div style=""> 
+
+
+      <div  style="float:left;width:30%;height:20px;">{{display.city}}</div>
+      <div  style="margin-left:20px;float:left;width:30%;height:20px;">{{display.company_name}}</div>
+     <div style="margin-top:-35px;float:left;margin-left:100px;margin-bottom: 20px;"><button  class="button button1">view jobs</button></div>
+    </div>
+
+
+
+    
+
+
+
+</div>
+
+</body>
+<router-outlet></router-outlet>
